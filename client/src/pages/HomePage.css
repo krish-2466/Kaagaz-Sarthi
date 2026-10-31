@@ -1,0 +1,59 @@
+.home-page { max-width: 900px; margin: 0 auto; }
+
+/* Hero */
+.hero { text-align: center; padding: var(--space-xl) var(--space-md); }
+.hero-badge {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: var(--space-md);
+}
+.hero-headline {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+.hero-highlight { color: var(--color-primary); }
+.hero-sub { color: var(--color-text-muted); max-width: 560px; margin: 0 auto var(--space-lg); }
+.hero-actions { display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-xl); }
+
+/* Demo card */
+.hero-demo-card { max-width: 420px; margin: 0 auto; text-align: left; }
+.demo-card-title { font-weight: 700; color: var(--color-primary-dark); margin-bottom: var(--space-md); font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.04em; }
+.demo-row { display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border); }
+.demo-row:last-of-type { border-bottom: none; }
+.demo-label { font-size: var(--font-size-sm); color: var(--color-text-muted); width: 110px; flex-shrink: 0; }
+.demo-value { flex: 1; font-weight: 500; font-size: var(--font-size-sm); }
+.demo-footnote { font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-sm); text-align: right; }
+
+/* Sections */
+.section { padding: var(--space-xl) var(--space-md); }
+.section-title { font-size: var(--font-size-xl); font-weight: 700; color: var(--color-primary-dark); margin-bottom: var(--space-lg); text-align: center; }
+
+/* How grid */
+.how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-md); }
+.how-card { text-align: center; }
+.how-icon { font-size: 2rem; margin-bottom: var(--space-sm); }
+.how-num { font-size: var(--font-size-sm); color: var(--color-primary); font-weight: 700; margin-bottom: 4px; }
+.how-title { font-weight: 700; margin-bottom: var(--space-sm); }
+.how-desc { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+
+/* Principles */
+.principles-section { background: var(--color-primary-light); border-radius: var(--radius-lg); }
+.principles-row { display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; margin-bottom: var(--space-md); }
+.principle-chip {
+  display: flex; align-items: center; gap: var(--space-xs);
+  background: white; border: 1px solid var(--color-border);
+  border-radius: 999px; padding: 6px 14px;
+  font-size: var(--font-size-sm); font-weight: 500;
+}
+.principles-note { text-align: center; color: var(--color-text-muted); font-size: var(--font-size-sm); }
+
+/* CTA */
+.home-cta { text-align: center; padding: var(--space-xl) 0; }

@@ -1,0 +1,6 @@
+.results-page { max-width: 760px; }
+.results-section-title { font-size: var(--font-size-lg); font-weight: 700; color: var(--color-primary-dark); margin: var(--space-lg) 0 var(--space-md); }
+.flags-list { display: flex; flex-direction: column; gap: var(--space-md); }
+.no-flags { color: var(--color-success); font-weight: 600; padding: var(--space-md) 0; }
+.results-actions { display: flex; gap: var(--space-md); margin-top: var(--space-lg); }
+.results-disclaimer { margin-top: var(--space-lg); font-size: var(--font-size-sm); color: var(--color-text-muted); }
