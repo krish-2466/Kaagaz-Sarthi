@@ -1,0 +1,33 @@
+.dz { padding: 18px 20px; transition: border-color .15s, opacity .15s; }
+.dz-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.dz-index { width: 24px; height: 24px; border-radius: 8px; display: grid; place-items: center; background: var(--blue-50); color: var(--blue-600); font-size: .8rem; font-weight: 800; }
+.dz-name { font-weight: 750; color: var(--navy-800); }
+.dz-req { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--text-3); margin-left: auto; }
+.dz-head .badge { margin-left: 4px; }
+
+.dz-zone {
+  display: grid; justify-items: center; gap: 4px; text-align: center; padding: 22px 16px;
+  border: 2px dashed var(--border-strong); border-radius: var(--r-md); background: var(--bg); color: var(--text-2);
+  cursor: pointer; transition: border-color .15s, background .15s;
+}
+.dz-zone svg { color: var(--blue-600); margin-bottom: 4px; }
+.dz-zone b { color: var(--navy-800); }
+.dz-zone u { color: var(--blue-600); text-underline-offset: 3px; }
+.dz-zone small { color: var(--text-3); }
+.dz-zone:hover, .dz-over { border-color: var(--blue-500); background: var(--blue-50); }
+.dz-locked { opacity: .55; }
+.dz-locked .dz-zone { cursor: not-allowed; }
+.dz-locked .dz-zone:hover { border-color: var(--border-strong); background: var(--bg); }
+
+.dz-file { display: flex; align-items: center; gap: 14px; }
+.dz-thumb { width: 64px; height: 64px; border-radius: 12px; overflow: hidden; background: var(--bg); border: 1px solid var(--border); display: grid; place-items: center; color: var(--text-3); flex-shrink: 0; }
+.dz-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.dz-meta { flex: 1; min-width: 0; }
+.dz-filename { font-weight: 650; font-size: .92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dz-size { font-size: .8rem; color: var(--text-3); }
+.dz-progress { position: relative; margin-top: 8px; height: 22px; border-radius: 999px; background: var(--blue-100); overflow: hidden; }
+.dz-progress > div { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, var(--blue-500), #6f93ff); transition: width .25s; }
+.dz-progress span { position: relative; display: block; padding: 0 12px; font-size: .74rem; font-weight: 700; line-height: 22px; color: var(--navy-800); }
+.dz-done { border-color: var(--ok-border); }
+.dz-failed { border-color: var(--bad-border); }
+.dz-reading { border-color: var(--blue-500); }

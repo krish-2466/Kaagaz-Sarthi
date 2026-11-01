@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CheckProvider } from './context/CheckContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Stepper from './components/layout/Stepper';
+import ScrollToTop from './components/layout/ScrollToTop';
 import HomePage from './pages/HomePage';
 import ServicePickerPage from './pages/ServicePickerPage';
 import UploadPage from './pages/UploadPage';
@@ -15,7 +17,9 @@ function App() {
     <BrowserRouter>
       <CheckProvider>
         <div className="app-shell">
+          <ScrollToTop />
           <Navbar />
+          <Stepper />
           <main className="app-main">
             <Routes>
               <Route path="/"                element={<HomePage />} />

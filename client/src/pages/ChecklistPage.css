@@ -1,24 +1,36 @@
-.checklist-page { max-width: 720px; }
+.cl-allgood { display: flex; gap: 20px; align-items: center; padding: 28px; background: linear-gradient(135deg, var(--ok-bg), #fff 70%); border-color: var(--ok-border); }
+.cl-allgood > span { color: var(--ok); }
+.cl-allgood h2 { font-size: 1.25rem; color: var(--navy-800); }
+.cl-allgood p { color: var(--text-2); }
 
-.checklist-all-good {
-  display: flex; align-items: center; gap: var(--space-lg);
-  background: var(--color-success-bg); border-color: var(--color-success);
-  margin-bottom: var(--space-lg);
+.cl-progress { padding: 16px 20px; margin-bottom: 18px; }
+.cl-prog-text { display: flex; justify-content: space-between; font-size: .92rem; color: var(--text-2); margin-bottom: 10px; }
+.cl-prog-text p b { color: var(--navy-800); }
+.cl-prog-text span { font-weight: 800; color: var(--ok); }
+.cl-bar { height: 8px; background: var(--blue-100); border-radius: 999px; overflow: hidden; }
+.cl-bar > div { height: 100%; background: linear-gradient(90deg, var(--blue-500), var(--ok)); transition: width .35s; border-radius: 999px; }
+
+.cl-list { list-style: none; display: grid; gap: 14px; }
+.cl-item { display: flex; gap: 16px; padding: 18px 20px; border-left: 5px solid var(--border-strong); transition: opacity .2s, background .2s; }
+.cl-item.tone-bad  { border-left-color: var(--bad); }
+.cl-item.tone-warn { border-left-color: var(--warn); }
+.cl-item.tone-info { border-left-color: var(--info); }
+.cl-item.is-done { opacity: .62; background: var(--ok-bg); border-left-color: var(--ok); }
+.cl-item.is-done .cl-top b { text-decoration: line-through; }
+
+.cl-check { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border-strong); background: #fff; display: grid; place-items: center; font-weight: 800; color: var(--text-2); flex-shrink: 0; transition: all .15s; }
+.cl-check:hover { border-color: var(--ok); color: var(--ok); }
+.is-done .cl-check { background: var(--ok); border-color: var(--ok); color: #fff; }
+.cl-content { flex: 1; min-width: 0; }
+.cl-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cl-top b { font-size: 1.05rem; color: var(--navy-800); }
+.cl-why { color: var(--text-2); font-size: .9rem; margin: 4px 0 10px; }
+.cl-fix { display: flex; gap: 8px; align-items: flex-start; font-size: .92rem; font-weight: 600; background: var(--bg); border-radius: var(--r-md); padding: 10px 12px; }
+.cl-fix svg { margin-top: 3px; color: var(--blue-600); }
+.cl-source { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: .82rem; font-weight: 650; }
+.cl-reminder { margin-top: 18px; }
+.cl-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+@media print {
+  .cl-item, .cl-progress { box-shadow: none; break-inside: avoid; }
 }
-.checklist-ok-icon { font-size: 3rem; }
-.checklist-ok-title { font-weight: 700; font-size: var(--font-size-lg); margin-bottom: 4px; }
-
-.checklist-items { display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-lg); }
-.checklist-item { transition: opacity 0.2s, background 0.2s; }
-.checklist-item.item-done { opacity: 0.6; background: var(--color-success-bg); }
-
-.checklist-label { display: flex; gap: var(--space-md); align-items: flex-start; cursor: pointer; }
-.checklist-label input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--color-primary); flex-shrink: 0; }
-.checklist-content { flex: 1; }
-.checklist-field { font-weight: 700; text-transform: capitalize; display: flex; align-items: center; gap: var(--space-sm); margin-bottom: 4px; }
-.checklist-badge { margin-left: auto; }
-.checklist-desc { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-bottom: var(--space-sm); }
-.checklist-source { font-size: var(--font-size-sm); color: var(--color-primary); }
-
-.checklist-actions { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
-.checklist-reminder { margin-top: var(--space-md); color: var(--color-success); font-weight: 600; font-size: var(--font-size-sm); }

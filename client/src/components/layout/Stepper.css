@@ -1,0 +1,24 @@
+.flow-steps { background: var(--surface); border-bottom: 1px solid var(--border); }
+.flow-steps-list { list-style: none; display: flex; align-items: center; height: 56px; gap: 0; }
+.fs-item { display: flex; align-items: center; flex: 1; min-width: 0; }
+.fs-item:last-child { flex: 0 0 auto; }
+.fs-link { display: flex; align-items: center; gap: 10px; color: var(--text-3); font-size: .88rem; font-weight: 600; text-decoration: none !important; white-space: nowrap; }
+a.fs-link:hover .fs-label { color: var(--navy-800); }
+.fs-dot {
+  width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font-size: .78rem; font-weight: 800; background: var(--bg); color: var(--text-3); border: 1.5px solid var(--border-strong);
+}
+.fs-bar { flex: 1; height: 2px; margin: 0 14px; background: var(--border); border-radius: 2px; min-width: 14px; }
+.fs-active .fs-dot { background: var(--blue-600); border-color: var(--blue-600); color: #fff; box-shadow: 0 0 0 4px rgba(29,78,216,.15); }
+.fs-active .fs-link { color: var(--navy-800); }
+.fs-done .fs-dot { background: var(--ok); border-color: var(--ok); color: #fff; }
+.fs-done .fs-link { color: var(--ok); }
+.fs-done .fs-bar { background: var(--ok); }
+
+@media (max-width: 720px) {
+  .fs-label { display: none; }
+  .fs-active .fs-label { display: inline; max-width: 110px; overflow: hidden; text-overflow: ellipsis; font-size: .82rem; }
+  .fs-link { gap: 8px; }
+  .fs-bar { margin: 0 6px; min-width: 8px; }
+  .fs-item { flex: 1 1 auto; }
+}
